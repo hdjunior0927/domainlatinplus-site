@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Domain Latin Plus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 0.2em;
+    }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 2em;
+      color: #555;
+    }
+    form {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 400px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    button {
+      background: #27ae60;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1em;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #219150;
+    }
+    footer {
+      margin-top: 3em;
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Domain Latin Plus</h1>
+  <p>Registra tu subdominio personalizado en minutos.</p>
+
+  <form id="subdomainForm">
+    <label for="subdomain">Nombre del subdominio</label>
+    <input type="text" id="subdomain" name="subdomain" placeholder="Ejemplo: miempresa" required />
+
+    <label for="email">Tu correo</label>
+    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+
+    <button type="submit">Solicitar</button>
+  </form>
+
+  <footer>
+    Con Dios no falta na’, todo vuelve a empezar.
+  </footer>
+
+  <script>
+    document.getElementById('subdomainForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Gracias por solicitar tu subdominio. Nos pondremos en contacto contigo pronto.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
