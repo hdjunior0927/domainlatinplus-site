@@ -1,2 +1,0 @@
-# domainlatinplus-site
-domain
