@@ -5,6 +5,41 @@
   <title>Contacto - DomainLatinPlus</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu.css" />
+  <style>
+    .contact-section {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+    }
+    .contact-section h2 {
+      color: #0070f3;
+      font-size: 1.8em;
+    }
+    .contact-section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      background-color: #0070f3;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #005bb5;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,9 +52,21 @@
   </div>
 </nav>
 
-<section>
-  <h2>Contacto</h2>
-  <p>Para más información, escríbenos a <a href="mailto:hdjunior1210@gmail.com">hdjunior1210@gmail.com</a> o contáctanos vía WhatsApp al +507 6573-1513.</p>
+<section class="contact-section">
+  <h2>Contáctanos</h2>
+  <p>¿Tienes dudas o necesitas ayuda personalizada? Estamos para ayudarte.</p>
+  <p>📧 Escríbenos a: <a href="mailto:hdjunior1210@gmail.com">hdjunior1210@gmail.com</a></p>
+  <p>📱 WhatsApp: +507 6573-1513</p>
+
+  <h3>O envíanos un mensaje directo</h3>
+  <form class="contact-form" action="https://formsubmit.co/hdjunior1210@gmail.com" method="POST">
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+    <textarea name="mensaje" placeholder="Escribe tu mensaje..." rows="4" required></textarea>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://domainlatinplus.com/gracias.html">
+    <button type="submit">Enviar mensaje</button>
+  </form>
 </section>
 
 </body>
