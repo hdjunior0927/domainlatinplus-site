@@ -6,38 +6,54 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu.css" />
   <style>
-    .dominios-section {
-      max-width: 900px;
+    .root-section {
+      max-width: 800px;
       margin: auto;
       padding: 40px 20px;
       font-family: Arial, sans-serif;
     }
-    .dominios-section h2 {
+    .root-section h2 {
       color: #0070f3;
-      font-size: 2em;
+      font-size: 1.8em;
+      margin-bottom: 20px;
     }
-    table {
+    .root-section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .domain-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+    .domain-list li {
+      background: #f0f4ff;
+      margin-bottom: 10px;
+      padding: 12px 15px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #003a8c;
+    }
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
     }
-    table th, table td {
-      padding: 12px;
-      border-bottom: 1px solid #ccc;
-      text-align: left;
-    }
-    table th {
-      background-color: #f0f0f0;
-    }
-    .btn-contacto {
+    .contact-form button {
       background-color: #0070f3;
       color: white;
-      padding: 8px 12px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 0.9em;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
     }
-    .btn-contacto:hover {
+    .contact-form button:hover {
       background-color: #005bb5;
     }
   </style>
@@ -49,41 +65,33 @@
   <div class="links">
     <a href="index.html">Inicio</a>
     <a href="premium.html">Dominios Premium</a>
-    <a href="dominios-raiz.html">Dominios Raíz</a>
     <a href="contacto.html">Contacto</a>
   </div>
 </nav>
 
-<section class="dominios-section">
+<section class="root-section">
   <h2>Dominios Raíz en Venta</h2>
-  <p>Explora nuestra selección de dominios raíz listos para registrar o transferir. Contacta con nosotros para verificar disponibilidad o iniciar el proceso.</p>
+  <p>Explora nuestra selección exclusiva de dominios profesionales como <strong>.com</strong>, <strong>.net</strong>, <strong>.ai</strong> y más. 
+     Si estás interesado en adquirir uno o quieres consultar disponibilidad y precios, escríbenos o envía tu solicitud en el formulario.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Dominio</th>
-        <th>Categoría</th>
-        <th>Precio desde</th>
-        <th>Acción</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>tecnolatino.com</td>
-        <td>Tecnología</td>
-        <td>$95 USD</td>
-        <td><a class="btn-contacto" href="mailto:hdjunior1210@gmail.com?subject=Interés en dominio tecnolatino.com">Solicitar</a></td>
-      </tr>
-      <tr>
-        <td>espacioai.net</td>
-        <td>Inteligencia Artificial</td>
-        <td>$79 USD</td>
-        <td><a class="btn-contacto" href="mailto:hdjunior1210@gmail.com?subject=Interés en dominio espacioai.net">Solicitar</a></td>
-      </tr>
-      <tr>
-        <td>saludpanama.com</td>
-        <td>Salud</td>
-        <td>$110 USD</td>
-        <td><a class="btn-contacto" href="mailto:hdjunior1210@gmail.com?subject=Interés en dominio saludpanama.com">Solicitar</a></td>
-      </tr>
-      <!-- Puedes
+  <ul class="domain-list">
+    <li>innovate.com</li>
+    <li>techzone.net</li>
+    <li>future.ai</li>
+    <li>globalhub.com</li>
+    <li>digitalsolutions.net</li>
+  </ul>
+
+  <h3>Solicita más información</h3>
+  <form class="contact-form" action="https://formsubmit.co/hdjunior1210@gmail.com" method="POST">
+    <input type="text" name="nombre" placeholder="Tu nombre" required />
+    <input type="email" name="correo" placeholder="Tu correo electrónico" required />
+    <textarea name="mensaje" placeholder="Escribe tu consulta o dominio de interés..." rows="4" required></textarea>
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_next" value="https://domainlatinplus.com/gracias.html" />
+    <button type="submit">Enviar consulta</button>
+  </form>
+</section>
+
+</body>
+</html>
