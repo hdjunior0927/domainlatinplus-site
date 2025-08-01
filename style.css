@@ -5,34 +5,69 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* NAVIGATION BAR */
+nav {
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+nav .logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav .links a {
+  margin-left: 1rem;
+  color: #90cdf4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav .links a:hover {
+  color: #fff;
+}
+
+/* PAGE STRUCTURE */
 header {
   background: #1f1f1f;
   color: #fff;
   padding: 1rem;
   text-align: center;
 }
-nav a {
-  margin: 0 1rem;
-  color: #90cdf4;
-  text-decoration: none;
-}
+
 main {
   padding: 2rem;
 }
+
 footer {
   text-align: center;
   padding: 1rem;
   background: #f4f4f4;
+  font-size: 0.9rem;
+  color: #666;
 }
-.card {
+
+/* CARD STYLE */
+.card,
+.dominio-box {
   border: 1px solid #ccc;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 10px;
+  background-color: #f9f9f9;
 }
-.card h3 {
+
+.card h3,
+.dominio-box h3 {
   margin: 0 0 0.5rem 0;
+  color: #0070f3;
 }
+
 .badge {
   display: inline-block;
   background: #e2e8f0;
@@ -41,4 +76,34 @@ footer {
   border-radius: 5px;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
+}
+
+/* BUTTON STYLE */
+.btn,
+input[type="submit"],
+button {
+  background-color: #0070f3;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+input[type="submit"]:hover,
+button:hover {
+  background-color: #005bb5;
+}
+
+/* FORM STYLE */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
