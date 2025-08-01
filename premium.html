@@ -17,68 +17,69 @@
   </div>
 </nav>
 
-<section style="padding: 40px 20px; max-width: 900px; margin: auto; font-family: Arial, sans-serif;">
+<section>
   <h2>🌐 Subdominios Premium a la venta</h2>
-  <p>Regístralos antes que alguien más. Marca digital única desde <strong>domainlatinplus.com</strong></p>
-<div id="premium-list"></div>
-  
-  <!-- SUBDOMINIO 1 -->
-  <div class="card">
-    <h3>nube.domainlatinplus.com</h3>
-    <span class="badge">Tecnología</span>
-    <p>Ideal para startups de almacenamiento en la nube, apps o herramientas SaaS.</p>
-    <ul>
-      <li>📈 Proyección: +25% en 3 meses</li>
-      <li>💰 Precio actual: $9 USD / anual</li>
-    </ul>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="hdjunior1210@gmail.com">
-      <input type="hidden" name="item_name" value="Subdominio: nube.domainlatinplus.com">
-      <input type="hidden" name="amount" value="9.00">
-      <input type="hidden" name="currency_code" value="USD">
-      <input type="hidden" name="return" value="https://domainlatinplus.com/gracias.html">
-      <button type="submit" class="btn">Comprar con PayPal</button>
-    </form>
-  </div>
+  <p>Regístralos antes que alguien más. Marca digital única desde domainlatinplus.com</p>
 
-  <!-- SUBDOMINIO 2 -->
-  <div class="card">
-    <h3>chatai.domainlatinplus.com</h3>
-    <span class="badge">Inteligencia Artificial</span>
-    <p>Perfecto para un servicio conversacional, consultoría IA o chatbots.</p>
-    <ul>
-      <li>📈 Proyección: +40% en 6 meses</li>
-      <li>💰 Precio actual: $12 USD / anual</li>
-    </ul>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="hdjunior1210@gmail.com">
-      <input type="hidden" name="item_name" value="Subdominio: chatai.domainlatinplus.com">
-      <input type="hidden" name="amount" value="12.00">
-      <input type="hidden" name="currency_code" value="USD">
-      <input type="hidden" name="return" value="https://domainlatinplus.com/gracias.html">
-      <button type="submit" class="btn">Comprar con PayPal</button>
-    </form>
-  </div>
-
-  <!-- SUBDOMINIO 3 -->
-  <div class="card">
-    <h3>launch.domainlatinplus.com</h3>
-    <span class="badge">Emprendimiento</span>
-    <p>Ideal para lanzamientos de productos, cursos o sitios MVP.</p>
-    <ul>
-      <li>📈 Proyección: +60% en 1 año</li>
-      <li>💰 Precio actual: $15 USD / anual</li>
-    </ul>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="hdjunior1210@gmail.com">
-      <input type="hidden" name="item_name" value="Subdominio: launch.domainlatinplus.com">
-      <input type="hidden" name="amount" value="15.00">
-      <input type="hidden" name="currency_code" value="USD">
-      <input type="hidden" name="return" value="https://domainlatinplus.com/gracias.html">
-      <button type="submit" class="btn">Comprar con PayPal</button>
-    </form>
-  </div>
+  <!-- Contenedor donde se insertarán los subdominios generados -->
+  <div id="premium-list"></div>
 </section>
+
+<!-- Aquí va el script justo antes de cerrar body -->
+<script>
+  // Base de palabras y categorías (puedes ampliar)
+  const palabrasClave = [
+    { palabra: "nube", categoria: "Tecnología", precio: 9, proyeccion: "+25% en 3 meses", descripcion: "Ideal para startups de almacenamiento en la nube, apps o herramientas SaaS." },
+    { palabra: "chatai", categoria: "Inteligencia Artificial", precio: 12, proyeccion: "+40% en 6 meses", descripcion: "Perfecto para un servicio conversacional, consultoría IA o chatbots." },
+    { palabra: "launch", categoria: "Emprendimiento", precio: 15, proyeccion: "+60% en 1 año", descripcion: "Ideal para lanzamientos de productos, cursos o sitios MVP." },
+    { palabra: "crypto", categoria: "Fintech", precio: 14, proyeccion: "+35% en 3 meses", descripcion: "Perfecto para proyectos relacionados con criptomonedas y blockchain." },
+    { palabra: "stream", categoria: "Entretenimiento", precio: 10, proyeccion: "+20% en 15 días", descripcion: "Ideal para plataformas de streaming y contenido multimedia." }
+  ];
+
+  function generarSubdominios() {
+    return palabrasClave.map(item => ({
+      nombre: `${item.palabra}.domainlatinplus.com`,
+      categoria: item.categoria,
+      precio: item.precio,
+      proyeccion: item.proyeccion,
+      descripcion: item.descripcion
+    }));
+  }
+
+  function mostrarSubdominios() {
+    const lista = generarSubdominios();
+    const contenedor = document.getElementById('premium-list');
+    contenedor.innerHTML = '';
+
+    lista.forEach(subdominio => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      card.innerHTML = `
+        <h3>${subdominio.nombre}</h3>
+        <span class="badge">${subdominio.categoria}</span>
+        <p>${subdominio.descripcion}</p>
+        <ul>
+          <li>📈 Proyección: ${subdominio.proyeccion}</li>
+          <li>💰 Precio actual: $${subdominio.precio} USD / anual</li>
+        </ul>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="hdjunior1210@gmail.com">
+          <input type="hidden" name="item_name" value="Subdominio: ${subdominio.nombre}">
+          <input type="hidden" name="amount" value="${subdominio.precio.toFixed(2)}">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="return" value="https://domainlatinplus.com/gracias.html">
+          <button type="submit" class="btn">Comprar con PayPal</button>
+        </form>
+      `;
+
+      contenedor.appendChild(card);
+    });
+  }
+
+  window.onload = mostrarSubdominios;
+</script>
+
+</body>
+</html>
